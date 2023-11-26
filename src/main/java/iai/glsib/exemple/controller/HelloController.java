@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/test")
 public class HelloController {
@@ -18,5 +20,10 @@ public class HelloController {
     @GetMapping("/salut")
     public String hello(){
         return helloService.Hello();
+    }
+
+    @GetMapping("/salut2")
+    public List<String> Hello2(){
+        return helloService.Hello2();
     }
 }

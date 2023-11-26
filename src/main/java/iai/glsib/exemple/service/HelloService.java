@@ -1,6 +1,5 @@
 package iai.glsib.exemple.service;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +9,14 @@ import java.util.List;
 public class HelloService implements  IHelloService{
 
     @Override
-    public List<String> Hello() {
-        return List.of("Ceci est notre deuxième API via le service");
+    public String Hello() {
+        return "Ceci est notre deuxième API via le service";
     }
+
+    @Override
+    public List<String> Hello2() {
+        return List.of("Ceci", "est", "un", "second", "type", "de", "retour");
+    }
+
+
 }
